@@ -2,16 +2,21 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // Swiper Styles
 import "swiper/css"
 
-
-const Slider = () => {
+const BASE_URL = 'https://image.tmdb.org/t/p/original/'
+const Slider = ({ data }) => {
   return (
-    <div className='bg-white/10 backdrop-blur-md rounded w-full h-96 overflow-hidden'>
+    <div className='bg-white/10 backdrop-blur-md rounded w-full h-full overflow-hidden'>
         <Swiper className='mySwiper w-full h-full text-center'>
-            <SwiperSlide>Poster - 1 -</SwiperSlide>
-            <SwiperSlide>Poster - 2 -</SwiperSlide>
-            <SwiperSlide>Poster - 3 -</SwiperSlide>
-            <SwiperSlide>Poster - 4 -</SwiperSlide>
-            <SwiperSlide>Poster - 5 -</SwiperSlide>
+            {data?.map(item=>(
+              <div key={item.id}>
+                <SwiperSlide className='relative'>
+                  {item.backdrop_path&&
+                    <img src={`${BASE_URL}${item?.backdrop_path}`} alt={item.title} />
+                  }
+                  <span className='absolute bottom-3 left-3 text-white text-lg font-bold'>{item.title}</span>
+                </SwiperSlide>
+              </div>
+            ))}
         </Swiper>
     </div>
   )

@@ -1,5 +1,8 @@
 export { default as Navbar } from './Navbar'
+export { default as Footer } from './Footer'
 export { default as Logo } from './Logo'
 export { default as Card } from './Card'
 export { default as Grid } from './Grid'
 export { default as Slider } from './Slider'
+// MovieDetails Components
+export { default as MovieDetailHeader } from './MovieDetailHeader'
