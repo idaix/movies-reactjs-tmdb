@@ -11,3 +11,18 @@ body{
     background-size: 100% auto;
     background-image: url(./assets/.png);
 } */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.hide_sb::-webkit-scrollbar {
+    display: none;
+}
+.hide_sb{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
