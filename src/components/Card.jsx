@@ -5,8 +5,11 @@ const Card = ({ title, poster_path, id }) => {
   return (
     <Link to={`/movie/${id}`}>
       <div className="rounded overflow-hidden">
-        {poster_path&&
-          <img src={`${BASE_URL}${poster_path}`} alt={title} />
+        {poster_path?
+          (<img src={`${BASE_URL}${poster_path}`} alt={title} />)
+          :(
+            <img src="https://picsum.photos/id/100/235/352" alt="no image!" />
+          )
         }
         <h3 className="text-slate-50 py-3">{title}</h3>
       </div>

@@ -12,6 +12,10 @@ body{
     background-image: url(./assets/.png);
 } */
 
+.app-main{
+    min-height: calc(100vh - 150px);
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -25,4 +29,42 @@ body{
 .hide_sb{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+
+
+
+/* https://image.tmdb.org/t/p/original//tmU7GeKVybMWFButWEGl2M4GeiP.jpg */
+
+
+.discover_image{
+    width: 100%;
+    height: 300px;
+    background-image: url(https://image.tmdb.org/t/p/original//tmU7GeKVybMWFButWEGl2M4GeiP.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+/* .discover_image::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+} */
+
+.bg-image{
+    /* background-image: linear-gradient(to right, rgba(31.5, 31.5, 31.5, 1) calc((50vw - 170px) - 340px), rgba(31.5, 31.5, 31.5, 0.84) 30%, rgba(31.5, 31.5, 31.5, 0.84) 100%); */
+    background-image: linear-gradient(to right, rgb(0 0 0) calc((50vw - 170px) - 340px), rgb(50 48 0 / 58%) 30%, rgb(0 0 0 / 84%) 100%);
+}
+.bg-image-for-search{
+    background-image: url(https://image.tmdb.org/t/p/original//tmU7GeKVybMWFButWEGl2M4GeiP.jpg);
+    width: 100%;
+    /* background-image: url(https://image.tmdb.org/t/p/original//7dm64SW5L5CCg47kAEAcdCGaq5i.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

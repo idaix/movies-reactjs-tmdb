@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Card, Grid, Menu, Slider } from '../components'
+import { Button, Card, Grid, Menu, Slider } from '../components'
 import { fetchMoviesData } from '../utils/fetchData'
 
 const Home = () => {
@@ -24,6 +24,17 @@ const Home = () => {
     <div className='grid gap-4'>
       <Menu data={genres} />
       <Slider data={posters} />
+      <div className="rounded discover_image">
+        <div className="bg-image rounded h-full w-full  p-3 flex items-center justify-around">
+          <div>
+            <h1 className='text-5xl font-bold flex-1'>Discover Movies</h1>
+            <p className='text-gray-400'>Easy peazy</p>
+          </div>
+          <div className=''>
+            <Button title='Discover' link to='discover/' />
+          </div>
+        </div>
+      </div>
       {/* --- Trending --- */}
       <section>
         <h1 className='text-3xl font-bold mb-4'>Trending</h1>
